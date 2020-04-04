@@ -4,76 +4,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>follege!</title>
-    <style>
-      html{
-        scroll-behavior: smooth;
-        padding-top: 2%;
-        width: 100%;
-      }
-      /* @keyframes movedown {
-        from{height:0px;opacity:0;}
-        to{height:200px; opacity:1;}
-      } */
-      .flip-card
-      {
-        margin-bottom:9%;
-      }
-     
-      /* .in_intro
-      {
+    <!-- Import css -->
+    <link rel="stylesheet" type="text/css" href="assets/index.css" />
 
-        animation-name:movedown;
-        animation-duration:1s;
-        animation-delay:0s;
-        animation-direction: normal;
-        animation-fill-mode: forwards;
-        border-bottom-width:1px;
-        border-bottom-color:grey;
-      } */
-      .flip-card {
-  background-color: transparent;
-  width: 155px;
-  height: 200px;
-  perspective: 1000px;
-}
-.flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
- 
-}
-.flip-card:hover .flip-card-inner {
-  transform: rotateX(-180deg);
-}
-.flip-card-front, .flip-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-}
-
-.flip-card-back {
-  transform: rotateX(-180deg);
-}
-
-     
-    </style>
-
-    
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
     <link rel="stylesheet" href="./assets/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://s.pageclip.co/v1/pageclip.css"
-      media="screen"
-    />
+    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen" />
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
@@ -82,7 +18,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800&display=swap" rel="stylesheet">
     <!-- Remember to include jQuery :) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-    
+
     <script src="./assets/vex/js/vex.combined.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.0/lottie.js'></script>
     <script src="https://cdnjs.com/libraries/bodymovin" type="text/javascript"></script>
@@ -90,14 +26,15 @@
 
     <script>
       vex.defaultOptions.className = "vex-theme-wireframe";
-      
     </script>
     <link rel="stylesheet" href="./assets/vex/css/vex.css" />
     <link rel="stylesheet" href="./assets/vex/css/vex-theme-wireframe.css" />
   </head>
 
   <body>
-    <p class="font-mont" style="color:white; background-color:black; z-index:9999; padding:5px 10px 5px 10px; font-size:40px; font-weight:bolder; border-radius: 5px;text-align:center; position:fixed; bottom:20px; right:20px;"><a href="#main" style="text-decoration: none; color:white;">&#8593;</a></p>
+    <!-- Page up button -->
+    <p class="font-mont" id="up-btn"><a href="#main" style="text-decoration: none; color:white;">&#8593;</a></p>
+    <!-- Button to join instagram -->
     <a href="https://instagram.com/follege.app" style="text-align: center; z-index:10000; align-items: baseline;"><img src="assets/images/38-instagram-3-512.png" style="width:50px; position: fixed; bottom:120px; right:20px; background-color:white; padding-left:0.6px; padding-bottom:1.2px;border-top-left-radius:  25px; border-top-right-radius: 25px; border-bottom-left-radius: 25px; border-bottom-right-radius: 25px; "/></a>
 
     <nav class="navbar navbar-expand-lg navbar-dark " id ="nav" style="background-color:#101426; position:fixed; width:100%; padding-bottom:0; padding-right: 0px; padding-left:0px;">
@@ -110,17 +47,17 @@
           <a class="nav-item nav-link font-mont " onclick="my()" href="#contact1" style="text-align: center;"> Contact</a>
           <a class="nav-item nav-link font-mont " href="Apply" onclick="my()" style="text-align: center;"> Internship</a>
           <a class="nav-item nav-link font-mont" href="#team" onclick="my()" style="text-align: center;"> Team</a>
-          <a class="nav-item nav-link font-mont" href="#Community" onclick="my()" style="text-align: center; "> Community</a>
+          <a class="nav-item nav-link font-mont" href="#contact" onclick="my()" style="text-align: center; "> Community</a>
           <a class="nav-item nav-link" style="text-align: center;">
             <input  type="checkbox" id = "form-acc" />
-            <label for="form-acc" class="font-mont" style="color:#06de99; box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19); letter-spacing: 0px; font-weight: bolder;  border-color: #06de99; border-width:3px;/* box-shadow: 0 0 1px rgba(255, 255, 255, 0.774), 0 0 2px rgba(255, 255, 255, 0.76), 0 0 5px #06de9ace, 0 0 10px #06de9ace, 0 0 10px #06de9ace, 0 0 20px #06de9ace, 0 0 30px #06de9ace;*/ background-color:black; padding-top:5px; padding-bottom:5px; padding-right:10px; padding-left:10px; border-radius: 10px;">
+            <label for="form-acc" class="font-mont" style="color:#06de99; letter-spacing: 0px; font-weight: bolder;  border-color: #06de99; border-width:3px;/* box-shadow: 0 0 1px rgba(255, 255, 255, 0.774), 0 0 2px rgba(255, 255, 255, 0.76), 0 0 5px #06de9ace, 0 0 10px #06de9ace, 0 0 10px #06de9ace, 0 0 20px #06de9ace, 0 0 30px #06de9ace;*/ background-color:black; padding-top:5px; padding-bottom:5px; padding-right:10px; padding-left:10px; border-radius: 10px;">
               <h5>R<span style="text-transform: lowercase;">equest</span> I<span style="text-transform: lowercase;">nvite</span></h5>
             </label>
             </a>
         </div>
       </div>
     </nav>
-    
+
     <div id="main">
       <div id="main_sub">
     <section class="hero" style="margin-bottom:100px !important;padding-top: 0px; margin-top:-30%">
@@ -132,20 +69,20 @@
           </h2>
           <br>
           <input  type="checkbox" id = "form-acc" />
-    <label for="form-acc" class="font-mont" style="color:#06de99;  letter-spacing: 0px; font-weight: bolder;  border-color: #06de99; border-width:3px;/* box-shadow: 0 0 1px rgba(255, 255, 255, 0.774), 0 0 2px rgba(255, 255, 255, 0.76), 0 0 5px #06de9ace, 0 0 10px #06de9ace, 0 0 10px #06de9ace, 0 0 20px #06de9ace, 0 0 30px #06de9ace;*/ background-color:black; padding-top:5px; padding-bottom:5px; padding-right:10px; padding-left:10px; border-radius: 10px;">
+    <label for="form-acc" class="font-mont" style="color:#06de99;  letter-spacing: 0px; font-weight: bolder;  border-color: #06de99; border-width:3px; background-color:black; padding-top:5px; padding-bottom:5px; padding-right:10px; padding-left:10px; border-radius: 10px;">
       <!-- <h3>R<span style="text-transform: lowercase;">equest</span> I<span style="text-transform: lowercase;">nvite</span></h3> -->
     <button type="button" class="btn btn-success">Request Invite</button>
-      
+
     </label>
 
 
-    
+
     </section>
     </div>
 
     <img src = "assets/images/Component 33 – 1.png" id = "main_device" style="position:absolute;  display: block;">
     </div>
-   
+
     <div class="row" id = "top_heading" >
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; font-weight:bolder;">
         <h1 style="width:100%; font-weight:bolder;" id ="top_heading_h1" >Introducing Follege Social App</h1>
@@ -180,24 +117,24 @@
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 square">
           <h2 style="color:white;text-align:right; font-weight: bolder ;" class="font-mont" >Your Sense Of Belonging</h2>
           <h3 style="font-weight: lighter;color:white;text-align:right;" class="font-mont">Show your true self. </h3>
-          <h3 style="font-weight:lighter;color:white;text-align:right;" class="font-mont">No one here to judge!</h3> 
-          <h3 style="font-weight:lighter;color:white;text-align:right;" class="font-mont">Explore and Grow</h3>  
+          <h3 style="font-weight:lighter;color:white;text-align:right;" class="font-mont">No one here to judge!</h3>
+          <h3 style="font-weight:lighter;color:white;text-align:right;" class="font-mont">Explore and Grow</h3>
         </div>
         <div id = "third" id="anime" class="col-xs-12 col-sm-12 col-md-6 col-lg-6 square">
       <lottie-player
       src="https://assets8.lottiefiles.com/packages/lf20_sU4ydN.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay >
   </lottie-player>
         </div>
-        
+
       </div>
-     
+
     </div>
     </div>
-    
+
       <div class="second" id="f" style="background-color:white; padding-bottom:1%;">
         <div class="container" style="width:100%; height:100%;">
           <div class="row" style="width:100%; height:100%;" style="align-items:baseline;">
-           
+
             <div  class="col-xs-12 col-sm-12 col-md-6 col-lg-6 square">
               <lottie-player
     src="https://assets3.lottiefiles.com/datafiles/iMAIoaSAs29w2xR/data.json"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop autoplay >
@@ -208,7 +145,7 @@
               <h3 style="font-weight: lighter;text-align:left;" class="font-mont">College Life is a plethora of</h3>
               <h3 style="font-weight: lighter; text-align: left;" class="font-mont">opportunities, only if one is aware!</h3>
               <h3 style="font-weight: lighter; text-align: left;" class="font-mont">Never miss out anything with follege.</h3>
-              
+
             </div>
           </div>
           <!--<div class="row">
@@ -220,7 +157,7 @@
         </div>
         </div>
 
-      
+
 
       <div class="second" id="fifth" style="background-color:#101426f3; color:white; padding-bottom:1%;">
         <div class="container" style="width:100%; height:100%;">
@@ -250,16 +187,16 @@
         <div class="row seventh" id = "top_heading" style="margin-top:5%;" >
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center; font-weight:bolder;">
             <h1 style="width:100%; font-weight:bolder;" id ="top_heading_h1" class="font-mont" >Meet the Team</h1>
-            <h3 style="font-weight:lighter;color:black;text-align:center;margin-top:2%;" class="font-mont">We work hard, And party even harder!</h3> 
+            <h3 style="font-weight:lighter;color:black;text-align:center;margin-top:2%;" class="font-mont">We work hard, And party even harder!</h3>
           </div>
         </div>
         <div class="sixth" id="sixth"  style="background-color:white;  padding-top:2%; padding-bottom:1%;">
           <div class="container-fluid" style="width:100%; padding-left:2%; padding-right:2%;">
-    
+
     <!--End of team header -->
             <!--TEam section -->
     <div class="row justify-content seventh"  style="padding-left:5%; padding-right:5%; padding-bottom:5%; padding-top:4%;">
-      <div class="col-lg-1"></div>  
+      <div class="col-lg-1"></div>
       <div class="col-6 col-sm-2 col-md-4 col-lg-2">
         <div class=" flip-card">
           <div class=" card flip-card-inner">
@@ -271,7 +208,7 @@
                   <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Abhinav Singh</p>
                   <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">CEO</p>
                 </div>
-              </div>           
+              </div>
              </div>
             <div class="flip-card-back">
               <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -295,7 +232,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Arindam Nath</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Product Mentor</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -319,7 +256,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Aman Garg</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">CTO</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -343,7 +280,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Aditya Verma</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">COO</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -367,7 +304,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Deepanshu Pal</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">CMO</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -393,7 +330,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Yatharth Vardan</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Head of Engineering</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -417,7 +354,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Dhananjay Deshwal</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">App Dev Head</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -441,7 +378,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Aaron Paul Jacob</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">App Dev Head</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -465,7 +402,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Isha Anand</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Content and Strategy</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -489,7 +426,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Pulkit Singh</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Marketing Head</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -515,7 +452,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Aditya Kumar</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Video & Media</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -539,7 +476,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Abhishek Aryan</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Tech R&D</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -563,7 +500,7 @@
                     <p class="font-mont"id = "card_name" style="color:grey; font-size:12px; margin-bottom:0%; padding-bottom:0.5px;">Paras Goel</p>
                     <p id = "card_post" class="font-mont" style="color:grey; font-size:12px;margin-top: 0%;padding-top:0px;">Finance & Legal</p>
                   </div>
-                </div>           
+                </div>
                </div>
               <div class="flip-card-back">
                 <div class=" in_intro" id="in_intro1"  style="display:block; text-align: center;">
@@ -578,8 +515,8 @@
         </div>
     </div>
 </div>
- 
-        </div> 
+
+      </div>
         <!-- End of team section -->
 
         <div class="eighth" id="anime1" style="background-color:#101426f3; color:white; padding-top:8%; padding-bottom:8%;">
@@ -594,7 +531,7 @@
                 Also, in a country like India where the education infrastructure is not strong , there is a huge gap between students and administration.
                 </h3>
                 <h3 class="font-mont" style="color:white; font-weight:lighter;  font-size:150%;">
-                And these big social platforms like FB-Instagram, they are nothing but a sea of information, due to which 60-70% of important information is often missed out! 
+                And these big social platforms like FB-Instagram, they are nothing but a sea of information, due to which 60-70% of important information is often missed out!
                 </h3>
                 <h3 class="font-mont" style="color:white; font-weight:lighter;  font-size:150%;">
                 Colleges as an environment need a better platform and we at follege aims to become a sense of belongingness for every student"
@@ -603,7 +540,7 @@
                <div class="col-md-1 col-lg-1"></div>
           </div>
           </div>
-</div>
+      </div>
            <div id="contact" style="padding-top: 4%;">
           <div class="ninth" id="contact" style="background-color:white;padding-top:2%; padding-bottom:5%;">
             <div class="container">
@@ -630,7 +567,7 @@
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                   <h1 class="font-mont" style="color:white; font-weight:bolder;">Contact Us!</h1>
                   <h3 style="font-size:160%; color:white; margin-top:1%; margin-bottom:1%;" class="font-mont">Drop us a line!</h3>
-                  
+
                   <form id = "second_form" action="" method="POST">
                     <input style="width:100%; padding-top:8px; padding-left:5px; padding-bottom:8px; font-weight: lighter; margin-bottom:5%;" type="username"class="font-mont" placeholder="Name">
                     <input style="width:100%; padding-top:8px; padding-left:5px; padding-bottom:8px; font-weight: lighter; margin-bottom:5%;" type="email" required class="font-mont" placeholder="Email">
@@ -656,7 +593,7 @@
                       </div>
                       </div>
                       </div>
-              
+
         <div class="foot" id = "foot" style="align-items: baseline; text-align:center;background-color:#101426f3; color:white; padding-top:1%; ">
           <div class="row"  style="padding-bottom:0px;">
           <div class="col-lg-5 col-sm-12 col-12 col-md-5" style="text-align:center;">
@@ -684,127 +621,15 @@
       </button>
     </form>
     <p class="font-mont" id="App" style=" color:transparent; background-color:transparent; padding:5px 10px 5px 10px; font-size:0%; font-weight:bolder; border-radius: 5px;text-align:center; position:fixed; right:20px; width:0px;"><a href="Apply" style="text-decoration: none; color:white;">Apply</a></p>
-   
-    
 
-    
- 
-
-<script>
-
-// .col- (extra small devices - screen width less than 576px)
-// .col-sm- (small devices - screen width equal to or greater than 576px)
-// .col-md- (medium devices - screen width equal to or greater than 768px)
-// .col-lg- (large devices - screen width equal to or greater than 992px)
-// .col-xl- (xlarge devices - screen width equal to or greater than 1200px)
-
-var team = document.getElementById('team');
-team.style.width = screen.width;
-var j1 = document.getElementById("top_heading");
-var j2 = document.getElementById("second");
-var j3 = document.getElementById("third");
-var j4 = document.getElementById("contact");
-var j5 = document.getElementById("anime");
-var j9 = document.getElementById("anime1");
-var j6 = document.getElementById("sixth");
-var j7 = document.getElementById("foot");
-var j8 = document.getElementById("Community");
-var j10 = document.getElementById("contact1");
-var nav = document.getElementById("navbarNavAltMarkup");
-var hide  = document.getElementById("hide")
-var after_hide = document.getElementById("after_hide");
-
-  var top_heading =  document.getElementById("top_heading");
-  var first = document.getElementById('main');
-var second = document.getElementById('main_sub');
-var top_heading_h1 = document.getElementById('top_heading_h1');
-
-first.style.height = screen.height +'px';
-first.style.width = screen.width + 'px';
-
-second.style.height = screen.height + 'px';
-second.style.width = screen.width + 'px';
-
-var animation_panels = document.getElementsByClassName("second");
-console.log(animation_panels.length);
-var i = 0;
-
-var navbar = document.getElementById("nav").offsetHeight;
-for( i =0;i<4;i++)
-{
-  var element_id = animation_panels[i].id;
-  var element = document.getElementById(element_id);
-  element.style.height = screen.height - navbar + "px";
-  element.style.width = screen.width + "px";
-  element.style.alignItems = "baseline";
-}
-
-
-
-var apply = document.getElementById("App");
-var home = document.getElementById("Home");
-var dev = document.getElementById('main_device');
-
-var isMobile = /iPhone|iPod|Android/i.test(navigator.userAgent);
-var isIpad  =/iPad/i.test(navigator.userAgent);		
-    
-    if (isMobile && screen.width <= 730) {
-      team.style.paddingLeft = "0.5%"; team.style.paddingRight = "0.5%";
-      var up = screen.height - 180;
-apply.style.bottom = up + "px";
-top_heading.style.marginTop = "60%";
-hide.style.display = "none";
-after_hide.style.marginTop = "15%";
-    }
-    else if(isIpad)
-    { top_heading.style.marginTop = "80%"; }
-    else{  apply.style.bottom = "180px"; top_heading.style.marginTop = "40%"; top_heading_h1.style.fontSize = "300%";  nav.style.position="absolute"; nav.style.right = "9px";}
-
-
-if(screen.width > screen.height + 100)
-{ 
-  dev.style.width = '40%';
-  dev.style.left = '35%';
-  var dis = 0.7*(screen.height);
-  dev.style.top = dis+'px';
-}
-if(screen.height > screen.width)
-{
-  dev.style.width = '80%';
-  dev.style.left = '10%';
-  
-  dev.style.top = ((screen.height)*70/100) + 'px';
-
-}
-
-var animation = bodymovin.loadAnimation({
-  container: document.getElementById('bodymovin'),
-  path: 'clutter.json',
-  renderer: 'svg',
-  loop : 'true',
-  autoplay: 'true',
-  name:'clutter',
-})
-var i;
-for(i = 0;i<front.length();i++)
-{
-  front[i].onclick(function(){ front[i].style.display = "none"; back[i].style.display = "block";});
-}  
-
-var as = document.getElementsByClassName("nav-item");
-function my(){
-if ($('#contact1').visible(true)) {
-    as[0].classList.add("active");
-} else {
-    as[0].classList.remove("active");
-}
-}
-
-</script>
+    <!-- Import js -->
+    <script src="assets/index.js"></script>
 
     <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
   <script src="./assets/app.js"></script>
-  <script src="assets/js/jquery.min.js"></script>
+  <!-- <script src="assets/js/jquery.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 </html>
