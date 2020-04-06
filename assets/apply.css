@@ -290,7 +290,8 @@ align-items: baseline;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #101426f3;
+  /* background-color: #101426f3; */
+  background-color: black;
   color: white;
   text-align: center;
   padding-top: 1%;
