@@ -3,6 +3,13 @@ html{
     padding-top: 2%;
     width: 100%;
   }
+
+  img.follege-logo{
+    width: 400%;
+    /* height: auto; */
+    margin-top:25%;
+  }
+
   .flip-card
   {
   margin-bottom:9%;

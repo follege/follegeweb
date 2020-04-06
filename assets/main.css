@@ -23,7 +23,8 @@ body {
 }
 #main
 {
-  background-color:#101426f3;
+  /* background-color:#101426f3; */
+  background-color: black;
   border-bottom-left-radius:30px;
   border-bottom-right-radius:30px;
 }
@@ -158,7 +159,7 @@ input[type="checkbox"] {
   }
 
   .design
-  { 
+  {
     padding: 0px;
     align-items: center;
     border-radius:5px;
@@ -197,21 +198,21 @@ input[type="checkbox"] {
   {
     from{ top:160px; right:125px;}
     to{top:180px; right:5px;}
-    
+
   }
   @keyframes toleftback
   {
     from{ top:215px; right:100px;}
     to{top:180px; right:5px;}
-    
+
   }
   @keyframes bottomleftback
   {
     from{top:240px; right:5px;}
     to{top:180px; right:5px;}
-    
+
   }
- 
+
 
   .font_san
   {
@@ -260,7 +261,7 @@ input[type="checkbox"] {
   {
     margin-top: 0px;
     padding-top:0px;
-    
+
   }
 
   span.same
