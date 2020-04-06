@@ -92,7 +92,9 @@ var animation = bodymovin.loadAnimation({
 // }
 
 var as = document.getElementsByClassName("nav-item");
+
 function my(){
+
 if ($('#contact1').visible(true)) {
     as[0].classList.add("active");
 } else {
