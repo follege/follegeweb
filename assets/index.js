@@ -13,7 +13,8 @@ var j10 = document.getElementById("contact1");
 var nav = document.getElementById("navbarNavAltMarkup");
 var hide  = document.getElementById("hide")
 var after_hide = document.getElementById("after_hide");
-
+ var body = document.getElementsByTagName("body");
+ body[0].width = screen.width + "px";
 var top_heading =  document.getElementById("top_heading");
 var first = document.getElementById('main');
 var second = document.getElementById('main_sub');
@@ -39,6 +40,9 @@ for( i =0;i<4;i++)
   element.style.alignItems = "baseline";
 }
 
+var mobile_view = document.getElementById("mobile_view");
+var desktop_view = document.getElementById("dektop_view");
+mobile_view.width = screen.width + "px";
 
 
 var apply = document.getElementById("App");
@@ -55,10 +59,21 @@ apply.style.bottom = up + "px";
 top_heading.style.marginTop = "60%";
 hide.style.display = "none";
 after_hide.style.marginTop = "15%";
+mobile_view.style.display = "block";
+desktop_view.style.display="none";
     }
     else if(isIpad)
-    { top_heading.style.marginTop = "80%"; }
-    else{  apply.style.bottom = "180px"; top_heading.style.marginTop = "40%"; top_heading_h1.style.fontSize = "300%";  nav.style.position="absolute"; nav.style.right = "9px";}
+    { top_heading.style.marginTop = "80%"; 
+    desktop_view.style.display="none";
+  var slider = document.getElementsByClassName("slide");
+  var sld1 = document.getElementById(slider[0].id);
+  var sld2 = document.getElementById(slider[1].id);
+  sld1.style.marginTop = sld2.style.marginTop = "10%";
+  }
+    else{  
+      mobile_view.style.display = "none";
+      desktop_view.style.display="block";
+      apply.style.bottom = "180px"; top_heading.style.marginTop = "40%"; top_heading_h1.style.fontSize = "300%";  nav.style.position="absolute"; nav.style.right = "9px";}
 
 
 if(screen.width > screen.height + 100)
@@ -111,5 +126,104 @@ function scrollFunction() {
     upbtn.style.display = "block";
   } else {
     upbtn.style.display = "none";
+  }
+}
+
+
+var i;
+
+function moveLeft()
+{
+  var cars = document.getElementsByClassName("col-8");
+  var j = 0;
+  var flag = 0;
+  for(j=0;j<cars.length;j++)
+  {
+    var car_id = cars[j].id;
+    var car = document.getElementById(car_id);
+    if(car.style.display == "block" && j!=0)
+    {
+      var next_car_id = cars[j-1].id;
+      var next_car = document.getElementById(next_car_id);
+      car.style.display = "none";
+      next_car.style.display = "block";
+      flag = 1;   
+    }
+    if(flag==1)
+    {
+      break;
+    }
+  }
+}
+
+function moveLeftDesk()
+{
+  var containers = document.getElementsByClassName("collg12");
+  var j = 0;
+  var flag = 0;
+  for(j=0;j<containers.length;j++)
+  {
+    var flush_id = containers[j].id;
+    var flush = document.getElementById(flush_id);
+    if(flush.style.display == "block" && j!=0)
+    {
+      var next_car_id = containers[j-1].id;
+      var next_car = document.getElementById(next_car_id);
+      flush.style.display = "none";
+      next_car.style.display = "block";
+      flag = 1;   
+    }
+    if(flag==1)
+    {
+      break;
+    }
+  }
+}
+
+function moveRightDesk()
+{
+  var containers = document.getElementsByClassName("collg12");
+  var j = 0;
+  var flag = 0;
+  for(j=0;j<containers.length;j++)
+  {
+    var flush_id = containers[j].id;
+    var flush = document.getElementById(flush_id);
+    if(flush.style.display == "block" && j!=containers.length-1)
+    {
+      var next_car_id = containers[j+1].id;
+      var next_car = document.getElementById(next_car_id);
+      flush.style.display = "none";
+      next_car.style.display = "block";
+      flag = 1;   
+    }
+    if(flag==1)
+    {
+      break;
+    }
+  }
+}
+
+function moveRight()
+{
+  var cars = document.getElementsByClassName("col-8");
+  var j = 0;
+  var flag = 0;
+  for(j=0;j<cars.length;j++)
+  {
+    var car_id = cars[j].id;
+    var car = document.getElementById(car_id);
+    if(car.style.display == "block" && j!=cars.length -1)
+    {
+      var next_car_id = cars[j+1].id;
+      var next_car = document.getElementById(next_car_id);
+      car.style.display = "none";
+      next_car.style.display = "block";
+      flag = 1;   
+    }
+    if(flag==1)
+    {
+      break;
+    }
   }
 }
